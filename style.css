@@ -1,0 +1,172 @@
+body{
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+    overflow-X:hidden;
+    overflow-Y:hidden;
+}
+
+.show{
+    opacity:1;
+}
+
+.load{
+opacity:0;
+transform:translateY(30px) scale(0);
+transition:all 1s ease-in-out;
+}
+
+.load.loaded{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+.Calculator{
+    position:relative;
+    border:1px solid black;
+    width:350px;
+    background:radial-gradient(circle , grey,pink ,white); 
+}
+
+#Calculator #calcOutput{
+    font-size:60px;
+    text-align:right;
+    border:1px solid white; 
+}
+
+#Calculator #equationOutput{
+    font-size:30px;
+    text-align:right;
+    position:absolute;
+    color:grey; 
+}
+
+#Calculator button{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    font-size:16px;
+    background-color:rgb(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid white;
+    font-weight:900;
+    touch-action:manipulation; 
+    -webkit-tap-highlight-color:transparent;
+}
+
+#Calculator .buttons{
+margin-top:150px;
+}
+#Calculator .orangeBtn{
+    background-color:white; 
+    color:black; 
+}
+
+/* DARK MODE */
+.calc .Switcher{
+    width:60px;
+    height:30px;
+    border-radius:20px;
+    background:radial-gradient(circle , grey,pink ,white); 
+    position:relative;
+     left:10px;
+}
+
+.calc .switch{
+width:30px;
+height:30px;
+border-radius:50%;
+background-color:white;
+transition:all 0.3s ease-in-out;
+}
+
+.calc.cli .Switcher{
+    background:radial-gradient(circle , black , black , black);
+}
+
+.dark_Mode{
+    background:radial-gradient(circle , black , black , black);
+    color:white;
+}
+
+.calc.cli .switch{
+    transform:translateX(30px);
+}
+
+.buttonsDark{
+    color:white;
+     background-color:grey;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid white;
+}
+
+.orangeBtnDark{
+    background-color:orange;
+    color:white;
+}
+
+#Calculator button.active{
+    background-color:orange;
+    color:white;
+}
+
+#Calculator h1{
+    display:none;
+}
+@media (min-width: 1028px) {
+
+    body{
+        background:radial-gradient(circle , brown , white , grey)
+    }
+#Calculator h1{
+    display:block;
+    background:linear-gradient(90deg ,green , purple , white);
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Calculator #equationOutput{
+    margin-top:50px;
+}
+
+.Calculator{
+    border:1px solid white; 
+    width:350px;
+    height:590px; 
+    background:radial-gradient(circle , grey,pink ,white); 
+    margin-top:-5px;
+    position:relative;
+    left:450px;
+    border-radius:10px;
+    box-shadow:0 0 20px 10px pink;
+}
+
+#Calculator #calcOutput{
+    position:relative;
+    text-align:right;
+    font-size:40px;
+    font-weight:bolder;
+    border:1px solid white;
+    margin-right:2px;
+    
+}
+
+#Calculator button{
+    color:black;
+    width:80px;
+    height:80px;
+}
+
+#Calculator button:hover{
+    background-color:aqua;
+}
+
+
+#Calculator .buttons{
+    margin-top:-50px;
+}
+
+}
+
+
